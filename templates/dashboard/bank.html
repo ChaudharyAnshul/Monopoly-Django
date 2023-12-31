@@ -1,0 +1,82 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{site_name}} | Bank </title>
+{% endblock %}
+
+
+{% block body %}
+<br>
+<br>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 card text-white bg-info">
+        <h4 class="card-header">Bank transactions</h4>
+        <div class="card-body">
+            <form class="form-group" method="POST" action="{% url 'bank transaction' %}">
+                {% csrf_token %}
+                <div>
+                    <label class="control-label form-control-sm" for="teams">Team Name :</label>
+                    <select id="teams" class="form-control form-control-sm" name="team_name" required>
+                        <option value="">None</option>
+                        {% for team in teams %}
+                        <option value="{{team.user.username}}">{{team.user.username}} - {{team.balance}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div>
+                    <label class="control-label form-control-sm" for="action">Action :</label>
+                    <select id="action" class="form-control form-control-sm" name="action" required>
+                        <option value="">None</option>
+                        <option value="Pay to Bank">Pay to Bank</option>
+                        <option value="Recieve from Bank">Recieve from Bank</option>
+                        <option value="Pay to Player">Pay to Player</option>
+                        <option value="Recieve from Player">Recieve from Player</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="control-label form-control-sm" for="amount">Amount :</label>
+                    <input id="amount" class="form-control form-control-sm" type="number" placeholder="Disabled input" name="amount" required>
+                </div>
+                <div>
+                    <br>
+                    <label class="control-label form-control-sm" for="amount">Type :</label>
+                    <div class="custom-control custom-radio pmd-radio custom-control-inline">
+                        <input type="radio" id="pay_recieve1" name="pay_recieve" class="custom-control-input" value="True" required>
+                        <label class="custom-control-label pmd-radio-ripple-effect" for="pay_recieve1">Recieve</label>
+                    </div>
+                    <div class="custom-control custom-radio pmd-radio custom-control-inline">
+                        <input type="radio" id="pay_recieve2" name="pay_recieve" class="custom-control-input" value="False" required>
+                        <label class="custom-control-label pmd-radio-ripple-effect" for="pay_recieve2">Pay</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="control-label form-control-sm" for="action">Transaction With :</label>
+                    <select id="teams" class="form-control form-control-sm" name="transaction_to" required>
+                        <option value="">None</option>
+                        <option value="bank">Bank</option>
+                        {% for team in teams %}
+                        <option value="{{team.user.username}}">{{team.user.username}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" class="btn btn-warning">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>
+    {{ request.user.id|json_script:"user_id" }}
+    {{ game_room|json_script:"game_room" }}
+
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
+
+{% endblock %}

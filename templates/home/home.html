@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home/home.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title>{{site_name}} | Home</title>
+
+</head>
+
+<body>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row center">
+                    <div class="col-xs-12">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <h4 style="margin-top: 3rem;">Welcome</h4>
+                                    <h2>Login To your account</h2>
+                                    <br>
+                                    <form class="form-group" action="{% url 'account_login' %}" method="post">
+                                        {% csrf_token %}
+                                        <div>
+                                            <label for="username">User Name</label><br>
+                                            <input id="username" name="username" type="text" placeholder="Team_1">
+                                        </div>
+                                        <div>
+                                            <label for="password">Password</label><br>
+                                            <input id="password" name="password" type="password" placeholder="********">
+                                        </div>
+                                        <input class="custom-btn" type="submit" value="Login">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+        {% endfor %}
+    </body>
+</body>
+
+</html>
