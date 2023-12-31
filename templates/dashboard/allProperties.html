@@ -1,0 +1,54 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{site_name}} | Property </title>
+    <link rel="stylesheet" href="{% static 'css/game/transactions.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Filter Team
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="{% url 'all properties' 'all' %}">All</a>
+        <a class="dropdown-item" href="{% url 'all properties' 'Team_1' %}">Team 1</a>
+        <a class="dropdown-item" href="{% url 'all properties' 'Team_2' %}">Team 2</a>
+        <a class="dropdown-item" href="{% url 'all properties' 'Team_3' %}">Team 3</a>
+        <a class="dropdown-item" href="{% url 'all properties' 'Team_4' %}">Team 4</a>
+        <a class="dropdown-item" href="{% url 'all properties' 'Team_5' %}">Team 5</a>
+        <a class="dropdown-item" href="{% url 'all properties' 'Team_6' %}">Team 6</a>
+    </div>
+</div>
+<hr style="border: 1px solid white;">
+<div class="row" >
+    {% for p in properties %}
+        {% if not p.properties.mortgaged %}
+        <div class="col-3 card bg-light">
+            <div class="card-header">{{p.player.user.username}}</div>
+            <div class="card-body">
+            <h4 class="card-title">{{p.properties.name}}</h4>
+            <p class="card-text">{{p.properties.desc}}</p>
+            <p class="card-text">Fine: {{p.properties.rent}}</p>
+            <p class="card-text">Mortgage: {{p.properties.mortgage}}</p>
+        </div>
+        </div>
+        {% else %}
+        <div class=" col-3 card text-white bg-danger">
+            <div class="card-header">{{p.player.user.username}}</div>
+            <div class="card-body">
+            <h4 class="card-title">{{p.properties.name}}</h4>
+            <p class="card-text">{{p.properties.desc}}</p>
+            <p class="card-text">Fine: {{p.properties.rent}}</p>
+            <p class="card-text">Mortgage: {{p.properties.mortgage}}</p>
+        </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+    {{ request.user.id|json_script:"user_id" }}
+    {{ game_room|json_script:"game_room" }}
+
+{% endblock %}

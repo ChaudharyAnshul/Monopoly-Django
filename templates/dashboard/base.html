@@ -1,0 +1,83 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/dashboard/style.css' %}">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+        <link rel="stylesheet" href="{% static 'css/game/game.css' %}">
+        <link rel="stylesheet" href="{% static 'css/game/dice.css' %}">
+        {% block head %}
+        <title>{{site_name}} | dashboard </title>
+        {% endblock %}
+    </head>
+    <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar">
+                <div class="custom-menu">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary"></button>
+                </div>
+                <div id="card-bgimg" class="img bg-wrap text-center py-4">
+                    <div class="user-logo">
+                        <!-- <div class="img" style="background-image: url(images/logo.jpg);"></div> -->
+                        <img class="img" src="{% static icon_image %}" alt="" >
+                        <h3 style="opacity: 1;">{{user.username}}</h3>
+                    </div>
+                </div>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="{% url 'dashboard' %}"><span class="fa fa-home mr-3"></span> Home</a>
+                    </li>
+                    {% if user.is_staff %}
+                    <li>
+                        <a href="{% url 'game' %}"><span class="fa fa-gamepad mr-3 notif"></span> Game Board</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'bank' %}"><span class="fa fa-university mr-3"></span> Bank</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'transactions' 'all' %}"><span class="fa fa-money mr-3"></span> Transactions</a>
+                    </li>
+                    {% endif %}
+                    {% if not user.is_staff %}
+                    <li>
+                        <a href="{% url 'your game' %}"><span class="fa fa-gamepad mr-3"></span> Your Game</a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{% url 'all properties' 'all' %}"><span class="fa fa-cube mr-3"></span> All Properties</a>
+                    </li>
+                    {% if user.is_superuser %}
+                    <li>
+                        <a href="{% url 'support' %}"><span class="fa fa-support mr-3"></span> Support</a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{% url 'account_logout' %}"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content" class="p-4 p-md-5 pt-5" style="background-color: #676767;">
+                {% block body %}
+                <h2 class="mb-4">Sidebar #09</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                {% endblock %}
+            </div>
+		</div>
+
+    <script src="{% static 'js/dashboard/jquery.min.js' %}"></script>
+    <script src="{% static 'js/dashboard/popper.js' %}"></script>
+    <script src="{% static 'js/dashboard/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/dashboard/main.js' %}"></script>
+    
+    </body>
+</html>

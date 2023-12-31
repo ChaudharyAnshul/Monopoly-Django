@@ -1,0 +1,555 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block head %}
+    <title>{{site_name}} | Game </title>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="responsive">
+    <div class="mainSquare">
+        <div class="row top">
+            <div id="b21" class="square2">
+                <!-- <span class="corner corner1">free <br/> parking</span> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b22" class="square1">
+                <div class="header header-top darkgreen1">
+                    <div class="header-text-bottom rotation2">Parking</div>
+                </div>
+                <!-- <div class="firstLine firstLine-top rotation2">kentucky <br/> avenue</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b23" class="square1">	
+                <div class="header header-top yellow">
+                    <div class="header-text-bottom rotation2">Amphitheatre</div>
+                </div>				
+                <!-- <div class="firstLine firstLine-top no-color rotation2">chance</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b24" class="square1">
+                <div class="header header-top darkred">
+                    <div class="header-text-bottom rotation2">Hostel</div>
+                </div>
+                <!-- <div class="firstLine firstLine-top rotation2">indiana <br /> avenue</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b25" class="square1">
+                <div class="header header-top lobby">
+                    <div class="header-text-bottom rotation2">Lobby</div>
+                </div>
+                <!-- <div class="firstLine firstLine-top rotation2">illinios <br /> avenue</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b26" class="square1">
+                <!-- <div class="firstLine firstLine-top no-color rotation2">b. & o. <br /> railroad</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b27" class="square1">
+                <div class="header header-top pink">
+                    <div class="header-text-bottom rotation2">Auditorium</div>
+                </div>
+                <!-- <div class="firstLine firstLine-top rotation2">atlantic <br /> avenue</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b28" class="square1">
+                <div class="header header-top brown">
+                    <div class="header-text-bottom rotation2">Canteen</div>
+                </div>
+                <!-- <div class="firstLine firstLine-top rotation2">ventnor <br /> avenue</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b29" class="square1">					
+                <div class="header header-top purple">
+                    <div class="header-text-bottom rotation2">Dheeraj Xerox</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b30" class="square1">
+                <div class="header header-top darkgreen">
+                    <div class="header-text-bottom rotation2">BCR</div>
+                </div>
+                <!-- <div class="firstLine firstLine-top rotation2">marvin <br /> gardens</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b31" class="square2">
+                <!-- <span class="corner corner2">go to<br />jail</span> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 10%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+        </div>
+        <div class="row center">
+            <div class="square2">
+                <div id="b20" class="squareSide">
+                    <!-- <div class="headerSide header-left orange">
+                        <div class="header-text-right rotation1">Canteen</div>
+                    </div>
+                    <div class="firstLine firstLine-left rotation1">new york <br /> avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b19" class="squareSide">
+                    <div class="headerSide header-left lightmaroon">
+                        <div class="header-text-right rotation1">Workshop</div>
+                    </div>
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b18" class="squareSide">						
+                    <div class="headerSide header-left brown">
+                        <div class="header-text-right rotation1">Canteen</div>
+                    </div>
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b17" class="squareSide">
+                    <div class="headerSide header-left darkgreen">
+                        <div class="header-text-right rotation1">BCR</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-left rotation1">st.james <br />place</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b16" class="squareSide">		
+                    <div class="headerSide header-left maroon">
+                        <div class="header-text-right rotation1">Garden</div>
+                    </div>				
+                    <!-- <div class="firstLine firstLine-left no-color rotation1">pennsylvania<br> railroad</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b15" class="squareSide">
+                    <!-- <div class="headerSide header-left white">
+                        <div class="header-text-right rotation1">chance</div>
+                    </div>
+                    <div class="firstLine firstLine-left rotation1">virginia<br /> avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b14" class="squareSide">
+                    <div class="headerSide header-left pink">
+                        <div class="header-text-right rotation1">Auditorium</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-left rotation1">states<br /> avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b13" class="squareSide">		
+                    <div class="headerSide header-left lightgreen">
+                        <div class="header-text-right rotation1">Reception</div>
+                    </div>				
+                    <!-- <div class="firstLine firstLine-left no-color rotation1">electric<br />company</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+                <div id="b12" class="squareSide">
+                    <div class="headerSide header-left aqua">
+                        <div class="header-text-right rotation1">PolyGround</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-left rotation1">st. charles<br />place</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; "></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; left: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; left: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; left: 10%;"></div>
+                </div>
+            </div>
+            <div id="mainSquare" class="square9">
+                <div class="card-play">
+                    <button id="pauseButton" class="btn btn-danger" style="position: relative; top: 15%;" onclick="pauseGame()"><span class="fa fa-pause mr-3"></span> Pause Game</button>
+                    <button id="resumeButton" class="btn btn-primary" style="position: relative; top: 15%; display: none;" onclick="resumeGame()"><span class="fa fa-play mr-3"></span> Resume Game</button> 
+                    <button id="skipButton" class="btn btn-warning" style="position: relative; top: 15%; margin: 5%;" onclick="skipTurn()"><span class="fa fa-pause mr-3"></span> Skip Turn</button>
+                </div>
+                <div class="card-box card-blue">
+                    <div class="card-blue-inside"> 
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" style="position: relative; top: 40%; left: 25%;">Chance - ODD</button> 
+                    </div>
+                </div>
+                <div class="logoBox">
+                    <span id="gameStats" class="logoName"></span>
+                    <input id="currentTeam" type="number" style="display: none;">
+                </div>
+                <div class="card-box card-orange">
+                    <div class="card-orange-inside">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" style="position: relative; top: 40%; left: 25%;">Chance - EVEN</button>
+                    </div>						
+                </div>
+            </div>
+            <div class="square2">
+                <div id="b32" class="squareSide">
+                    <div class="headerSide header-right yellow">
+                        <div class="header-text-right rotation3">Amphitheatre</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-right rotation3">pacific<br /> avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b33" class="squareSide">
+                    <div class="headerSide header-right aqua">
+                        <div class="header-text-right rotation3">PolyGround</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-right rotation3">north<br />carolina<br />avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b34" class="squareSide">						
+                    <!-- <div class="firstLine firstLine-right no-color rotation3">community<br />chest</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b35" class="squareSide">
+                    <div class="headerSide header-right red">
+                        <div class="header-text-right rotation3">Library</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-right rotation3">pennsylvania<br /> avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b36" class="squareSide">
+                    <div class="headerSide header-right darkred">
+                        <div class="header-text-right rotation3">Hostel</div>
+                    </div>						
+                    <!-- <div class="firstLine firstLine-right no-color rotation3">short<br /> line</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b37" class="squareSide">
+                    <div class="headerSide header-right orange">
+                        <div class="header-text-right rotation3">AutoStand</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-right no-color rotation3">chance</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b38" class="squareSide">						
+                    <!-- <div class="headerSide header-right blue">
+                        <div class="header-text-right rotation3">Canteen</div>
+                    </div>
+                    <div class="firstLine firstLine-right rotation3">park<br /> place</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b39" class="squareSide">	
+                    <div class="headerSide header-right lightblue">
+                        <div class="header-text-right rotation3">CCD</div>
+                    </div>					
+                    <!-- <div class="firstLine firstLine-right no-color rotation3">luxury<br /> tax</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+                <div id="b40" class="squareSide">
+                    <div class="headerSide header-right lightgreen">
+                        <div class="header-text-right rotation3">Reception</div>
+                    </div>
+                    <!-- <div class="firstLine firstLine-right rotation3">tennessee<br /> avenue</div> -->
+                    <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right:0%;"></div>
+                    <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right:0%;"></div>
+                    <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right:0%;"></div>
+                    <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 0%; height: 33.33%; right: 10%;"></div>
+                    <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 33.33%; height: 33.33%; right: 10%;"></div>
+                    <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 66.66%; height: 33.33%; right: 10%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row top">
+            <div id="b11" class="square2">
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b10" class="square1">
+                <div class="header header-bottom orange">
+                    <div class="header-text-bottom">Auto Stand</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b9" class="square1">
+                <div class="header header-bottom green">
+                    <div class="header-text-bottom">Labs</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b8" class="square1">
+                <div class="header header-bottom yellow">
+                    <div class="header-text-bottom">Amphitheatre</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b7" class="square1">
+                <div class="header header-bottom red">
+                    <div class="header-text-bottom">Library</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b6" class="square1">					
+                <div class="header header-bottom white">
+                    <div class="header-text-bottom">Fee</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b5" class="square1">
+                <div class="header header-bottom blue">
+                    <div class="header-text-bottom">Terrace</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b4" class="square1">
+                <div class="header header-bottom purple">
+                    <div class="header-text-bottom">Dheeraj Xerox</div>
+                </div>
+                <!-- <div class="firstLine firstLine-bottom">baltic<br /> avenue</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b3" class="square1">
+                <div class="header header-bottom lightblue">
+                    <div class="header-text-bottom">CCD</div>
+                </div>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b2" class="square1">
+                <div class="header header-bottom brown">
+                    <div class="header-text-bottom">Canteen</div>
+                </div>
+                <!-- <div class="firstLine firstLine-bottom">mediter-<br /> ranean <br /> avenuefesfgesf</div> -->
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+            <div id="b1" class="square2">
+                <span class="corner corner3" style="color: black;">collect<br />15,000<br />as you pass</span>
+                <div class="T1" style="background-color: rgba(255, 77, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%;"></div>
+                <div class="T2" style="background-color: rgba(0, 109, 255, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T3" style="background-color: rgba(252, 255, 0, 1); color: black; text-align: center; position: absolute; top: 80%; width: 33.33%; left: 66.66%;"></div>
+                <div class="T4" style="background-color: rgba(3, 255, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%;"></div>
+                <div class="T5" style="background-color: rgba(250, 0, 0, 1); color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 33.33%;"></div>
+                <div class="T6 triangle-up" style="background-color: rgba(255, 0, 247, 1);color: black; text-align: center; position: absolute; top: 90%; width: 33.33%; left: 66.66%;"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div> 
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document" >
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">Chance</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" style="width: 100% !important;">
+				<ul class="list-group">
+                    <li class="list-group-item">1. Take rs.1000 from everyone for PRARAMBH</li>
+                    <li class="list-group-item">3. You won a iste event- 221B Baker Street Cash prize rs.1000</li>
+                    <li class="list-group-item">5. Today is your birthday! Give every player a treat of rs.5000 each.</li>
+                    <li class="list-group-item">7. Pay 5000 for iste membership.</li>
+                    <li class="list-group-item">9. You have written the workshop  writeup for others. collect 1000.</li>
+                    <li class="list-group-item">11. You made your team win. collect 500 from everyone.</li>
+                </ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document" >
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">Chance</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" style="width: 100% !important;">
+				<ul class="list-group">
+                    <li class="list-group-item">2. Pay rs.5000 for losing your ID</li>
+                    <li class="list-group-item">4. Take rs.1500 from everyone for winning the debate competition.</li>
+                    <li class="list-group-item">6. Pay rs.5000 to everyone on the occasion of Chocolate day.</li>
+                    <li class="list-group-item">8. Take Rs. 1000 from everyone for Sort Donation.</li>
+                    <li class="list-group-item">10. Pay for jersey 4000</li>
+                    <li class="list-group-item">12.you are an iste council member. You have arranged a technical webinar. Take entry fee as rs. 500 from everyone.</li>
+                </ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ request.user.id|json_script:"user_id" }}
+{{ game_room|json_script:"game_room" }}
+<script src="{% static 'js/game/game.js' %}"></script>
+
+{% endblock %}

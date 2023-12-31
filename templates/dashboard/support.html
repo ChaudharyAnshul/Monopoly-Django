@@ -1,0 +1,46 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{site_name}} | Support </title>
+{% endblock %}
+
+
+{% block body %}
+<br>
+<br>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 card text-white bg-info">
+        <h4 class="card-header">Log Out User</h4>
+        <div class="card-body">
+            <form class="form-group" method="POST" action="{% url 'support logout' %}">
+                {% csrf_token %}
+                <div>
+                    <label class="control-label form-control-sm" for="teams">Team Name :</label>
+                    <select id="teams" class="form-control form-control-sm" name="team_name" required>
+                        <option value="">None</option>
+                        {% for team in teams %}
+                        <option value="{{team.user.username}}">{{team.user.username}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" class="btn btn-danger" value="Logout">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>
+    {{ request.user.id|json_script:"user_id" }}
+    {{ game_room|json_script:"game_room" }}
+
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
+
+{% endblock %}

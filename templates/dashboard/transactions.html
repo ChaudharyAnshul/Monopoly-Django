@@ -1,0 +1,82 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{site_name}} | Transactions </title>
+    <link rel="stylesheet" href="{% static 'css/game/transactions.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<div>
+    <h2 style="color: white;">Transactions :</h2>
+    <hr style="border: 1px solid white;">
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Filter Team
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'transactions' 'all' %}">All</a>
+            <a class="dropdown-item" href="{% url 'transactions' 'Team_1' %}">Team 1</a>
+            <a class="dropdown-item" href="{% url 'transactions' 'Team_2' %}">Team 2</a>
+            <a class="dropdown-item" href="{% url 'transactions' 'Team_3' %}">Team 3</a>
+            <a class="dropdown-item" href="{% url 'transactions' 'Team_4' %}">Team 4</a>
+            <a class="dropdown-item" href="{% url 'transactions' 'Team_5' %}">Team 5</a>
+            <a class="dropdown-item" href="{% url 'transactions' 'Team_6' %}">Team 6</a>
+        </div>
+    </div>
+    <table class="table table-light table-striped">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Action</th>
+                <th>Amount</th>
+                <th>Balance Before</th>
+                <th>Pay Or Reveive</th>
+                <th>New Balance</th>
+                <th>Transaction With</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{transaction.player.user.username}}</td>
+                <td>{{transaction.action}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.balanceAtTransaction}}</td>
+                {% if transaction.payOrReveive %}
+                <td style="color: rgb(74, 197, 74);">Recieve</td>
+                {% else %}
+                <td style="color: rgb(255, 4, 4);">Pay</td>
+                {% endif %}
+                <td>{{transaction.newBalance}}</td>
+                <td>{{transaction.transaction_to}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">Modal title</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>Bootstrap Modal is streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+    {{ request.user.id|json_script:"user_id" }}
+    {{ game_room|json_script:"game_room" }}
+
+{% endblock %}
